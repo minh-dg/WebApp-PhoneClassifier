@@ -12,8 +12,8 @@ export_file_name = 'export.pkl'
 path = Path(__file__).parent/'models'
 
 app = FastAPI()
-app.mount('/app/static', StaticFiles(directory='./app/static'), name="static")
-templates = Jinja2Templates(directory="./app/templates")
+app.mount("/static", StaticFiles(directory="app/static"))
+templates = Jinja2Templates(directory="app/templates")
 learner = None
 
 
